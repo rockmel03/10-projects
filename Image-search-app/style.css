@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: #dadada;
+}
+
+.heading{
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin:10px;
+}
+.search-bar input[type='text']{
+    width: 60%;
+    font-size: 18px;
+    padding: 10px 20px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 12px #00000050;
+}
+.search-bar input[type='submit']{
+    color:#fff;
+    background:rgb(1, 166, 1);
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 12px #00000050;
+    transition: background-color .5s ease;
+}
+.search-bar input[type='submit']:hover{
+    background-color: rgb(0, 105, 0);
+}
+
+.search-results{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:10px;
+    flex-wrap: wrap;
+    max-width: 12000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+.search-result{
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px #00000050;
+
+}
+.search-result:hover img{
+    transform: scale(1.1);
+}
+.search-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition : transform .3s ease-in-out;
+}
+.search-result a{
+    width: 100%;
+    display:block;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+}
+.search-result a:hover{
+    color: #848181;
+}
+
+#show-more-btn{
+    position: relative;
+    background-color: rgb(77, 47, 186);
+    left:50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border:none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: backgroung-color .5s ease;
+    display: none;
+}
+#show-more-btn:hover{
+    background-color: rgb(3, 3, 93);
+}
+
+@media  screen and (max-width:900px) {
+    .search-bar{
+        /* flex-direction: column; */
+        gap: 10px;
+
+    }
+    .search-bar #serach-id{
+        width: 50%;
+    }
+}
+@media  screen and (max-width:490px) {
+    .search-bar{
+        flex-direction: column;
+        gap: 10px;
+
+    }
+    .search-bar #serach-id{
+        width: 85%;
+    }
+    .search-result{
+        width: 400px;
+    }
+}

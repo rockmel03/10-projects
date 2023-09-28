@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-size: 8vw;
+    text-align: center;
+    margin: 0 auto;
+}
+.dice{
+    font-size: 20vw;
+    line-height: .8;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.roll-animation{
+    animation-name: roll;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes roll {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotateX(1000deg) rotateY(1100deg);
+    }
+}
+.buttons{
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.buttons >button{
+    margin: 10px auto;
+    background: #000;
+    color:#fff;
+    padding: 15px 20px ;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 4px 12px #00000050;
+    transition: all 0.2s ease;
+}
+#clear-button{
+    display: none;
+}
+#roll-button:hover{
+    background-color: #dadada;
+    color:#000;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    width: 60%;
+    margin: 2px auto;
+    padding: 0px 20px;
+    line-height: 1;
+    background-color: #d3d3d350;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px #00000050;
+}
+ul li span{
+    font-size: 8vw;
+}

@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    background-color: rgb(222, 222, 215);
+}
+.container{
+    max-width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,.5);
+    border-radius: 10px;
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    flex-direction: column;
+    gap:10px;
+    padding: 10px;
+    margin: 10px;
+}
+.container h1{
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: center;
+}
+.container p{
+    font-size: .8rem;
+}
+.tip-form{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.tip-form label{
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+.tip-form input{
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgb(160, 160, 160);
+    outline: none;
+    padding: 5px;
+}
+.tip-form input[type='submit']{
+    cursor: pointer;
+    background-color: rgb(68, 146, 68);
+    color: #fff;
+    border:none;
+    margin-top:10px;
+    font-size: 1rem;
+    transition: background-color .2s ease;
+}
+.tip-form input[type='submit']:hover{
+    background-color: rgb(47, 100, 47);
+}
+.container h6{
+    align-self: self-start;
+    font-size: 1rem;
+}
