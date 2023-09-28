@@ -21,7 +21,6 @@ function calculateAge(value) {
 formEl.addEventListener('submit', function (e) {
     e.preventDefault()
     let Age = calculateAge(inputAge.value)
-    console.log(Age)
     if (Age >= 0) {
         result.innerHTML = `Your Age is ${Age} Years Old`
     } else {
